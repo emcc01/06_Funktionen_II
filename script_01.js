@@ -29,7 +29,13 @@ function mult(a,b) {
 
 // module: division a / b | test:
 function div(a,b) {
-	return a / b;
+	if (b != 0) {
+		return a / b;
+	} else {
+		return "Teilen durch 0 nicht möglich";
+	}
+
+	
 }
 
 
@@ -38,8 +44,8 @@ function div(a,b) {
 // module: output | test:
 // output()
 
-output(mult(3,2));
-output(mult(2,-2));
+output(div(3,0));
+output(div(2,-2));
 
 function output(outputData) {
 	console.log(outputData);

@@ -7,13 +7,46 @@
 
 1. Dateneingabe + -überprüfung : 
 2. Auswahl Rechenart : 
-3. Fkt. Grundrechenarten : 
+3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
 */
 
 // Konstanten
 const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
 const ERROR_STR_GEN = "Irgendetwas ging schief!"
+
+
+// module: calculator | tests:
+function calculator(a,b,op) {
+
+	switch (op) {
+
+		case "+":
+            return add(a,b);          //return
+		case "-":
+			return sub(a,b);
+		case "*":
+			return mult(a,b);
+		case "/":
+		case ":":	
+		    return div(a,b);
+		default:
+			return ERROR_STR_GEN;
+	}
+
+	
+}
+
+agreement : "+","-","*",":","/"
+output(calculator(3,2,"+"));
+output(calculator(3,2,"-"));
+output(calculator(3,2,"*"));
+output(calculator(3,2,":"));
+output(calculator(3,2,"/"));
+output(calculator(3,0,"/"));
+
+output(calculator(3,2,"#?!"));
+
 
 
 // module: addition a + b | test:
@@ -38,7 +71,6 @@ function div(a,b) {
 	} 
 		return a / b;    //Regel
 }
-
 
 
 

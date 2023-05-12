@@ -38,8 +38,8 @@ function div(a,b) {
 // module: output | test:
 // output()
 
-output(sub(2,2));
-output(sub(2,-2));
+output(mult(3,2));
+output(mult(2,-2));
 
 function output(outputData) {
 	console.log(outputData);

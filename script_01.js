@@ -11,6 +11,10 @@
 4. Ausgabe in Konsole : check!
 */
 
+// Konstanten
+const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
+const ERROR_STR_GEN = "Irgendetwas ging schief!"
+
 
 // module: addition a + b | test:
 function add(a,b) {
@@ -29,13 +33,10 @@ function mult(a,b) {
 
 // module: division a / b | test:
 function div(a,b) {
-	if (b != 0) {
-		return a / b;
-	} else {
-		return "Teilen durch 0 nicht möglich";
-	}
-
-	
+	if (b == 0) {          // Ausnahme
+		return ERROR_STR_DIV;
+	} 
+		return a / b;    //Regel
 }
 
 
